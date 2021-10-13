@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Home</title>
+    <style>
+        .form-control{
+            width: 50%;
+        }
+        button{
+            margin-top: 10px;
+        }
+        .container{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="/" method="post">
+            <div>
+                <input class="form-control" type="text" name="input" id="input">
+                <button class="btn btn-success" type="submit">Submit</button>
+            </div>
+        </form>
+        <p>Còn lại {{length}} bài nữa</p>
+        <table>
+            <tr>
+                <th>ExamId</th>
+            </tr>
+            {{#each exam}}
+                <tr>
+                    <td>{{ExamId}}</td>
+                </tr>
+            {{/each}}
+        </table>
+    </div>
+</body>
+</html>
